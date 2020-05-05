@@ -19,11 +19,11 @@ after_success:
 #login in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
 
-#Take those images and push them to docker hub
-  - docker push -t crank777/multi-client
-  - docker push -t crank777/multi-nginx
-  - docker push -t crank777/multi-server
-  - docker push -t crank777/multi-worker
+#Take those images and push them to docker hub - 
+  - docker push -t rev01ver/multi-client
+  - docker push -t rev01ver/multi-nginx
+  - docker push -t rev01ver/multi-server
+  - docker push -t rev01ver/multi-worker
  
 
 
