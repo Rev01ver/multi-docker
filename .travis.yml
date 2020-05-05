@@ -5,7 +5,7 @@ before_install:
   - docker build -t rev01ver/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true rev01ver/react-test npm test
+  - docker run rev01ver/react-test npm test -- --coverage
 
 after_success:
   - docker build -t rev01ver/multi-client ./client
@@ -17,10 +17,10 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
 
 #Take those images and push them to docker hub - docker cred!
-  - docker push rev01ver/multi-server
-  - docker push rev01ver/multi-nginx
-  - docker push rev01ver/multi-server
-  - docker push rev01ver/multi-worker
+  - docker push crank777/multi-server
+  - docker push crank777/multi-nginx
+  - docker push crank777/multi-server
+  - docker push crank777/multi-worker
  
 
 
