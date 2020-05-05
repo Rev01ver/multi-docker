@@ -17,7 +17,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
 
 #Take those images and push them to docker hub - docker cred!
-  - docker push crank777/multi-server
+  - docker push crank777/multi-client
   - docker push crank777/multi-nginx
   - docker push crank777/multi-server
   - docker push crank777/multi-worker
