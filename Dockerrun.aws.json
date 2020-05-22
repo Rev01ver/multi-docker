@@ -1,6 +1,6 @@
 {
-    "AWSEBDockerrunversion": 2,
-    "containerdefinitions": [
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
         {
             "name": "client",
             "image": "crank777/multi-client",
