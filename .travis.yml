@@ -25,7 +25,6 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  edge: true
   region: us-east-2
   app: multi-docker
   env: MultiDocker-env
@@ -34,4 +33,5 @@ deploy:
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
